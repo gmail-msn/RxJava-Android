@@ -55,6 +55,28 @@ public class MainFragment
               .commit();
     }
 
+    @OnClick(R.id.btn_filtering_observables)
+    public void filteringObservable() {
+        getActivity().getSupportFragmentManager()
+              .beginTransaction()
+              .addToBackStack(FilteringObservablesFragment.class.toString())
+              .replace(android.R.id.content,
+                    new FilteringObservablesFragment(),
+                      FilteringObservablesFragment.class.toString())
+              .commit();
+    }
+
+    @OnClick(R.id.btn_transforming_observables)
+    public void transformingOperators() {
+        getActivity().getSupportFragmentManager()
+              .beginTransaction()
+              .addToBackStack(TransformingFragment.class.toString())
+              .replace(android.R.id.content,
+                    new TransformingFragment(),
+                      TransformingFragment.class.toString())
+              .commit();
+    }
+
     @OnClick(R.id.btn_demo_debounce)
     public void demoThrottling() {
         getActivity().getSupportFragmentManager()

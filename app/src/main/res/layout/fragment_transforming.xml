@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="@string/msg_demo_transforming_observable"
+        />
+
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_buffer_operation"
+                style="@style/btn_request_style"
+                android:layout_marginLeft="20dp"
+                android:textSize="16sp"
+                android:text="Buffer Operator"
+                />
+
+            <Button
+                android:id="@+id/btn_flat_map_operation"
+                style="@style/btn_request_style"
+                android:layout_marginLeft="20dp"
+                android:textSize="16sp"
+                android:text="Flat Map"
+                />
+
+            <Button
+                android:id="@+id/btn_concat_map_operation"
+                style="@style/btn_request_style"
+                android:layout_marginLeft="20dp"
+                android:textSize="16sp"
+                android:text="Concat Map"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_group_by_operation"
+                style="@style/btn_request_style"
+                android:layout_marginLeft="20dp"
+                android:textSize="16sp"
+                android:text="Group By"
+                />
+            <Button
+                android:id="@+id/btn_map_operation"
+                style="@style/btn_request_style"
+                android:layout_marginLeft="20dp"
+                android:textSize="16sp"
+                android:text="Map Operation"
+                />
+            <Button
+                android:id="@+id/btn_cast_operation"
+                style="@style/btn_request_style"
+                android:layout_marginLeft="20dp"
+                android:textSize="16sp"
+                android:text="Cast Operation"
+                />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_operation_running"
+            android:visibility="invisible"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="20dp"
+            />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list_threading_log"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        />
+</LinearLayout>

@@ -106,5 +106,19 @@
             android:layout_width="match_parent"
             android:text="@string/btn_demo_custom"
             />
+
+        <Button
+            android:id="@+id/btn_transforming_observables"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/btn_transforming_observables"
+            />
+
+        <Button
+            android:id="@+id/btn_filtering_observables"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/btn_filtering_observables"
+            />
     </LinearLayout>
 </ScrollView>
