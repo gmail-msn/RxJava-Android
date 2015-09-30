@@ -34,7 +34,7 @@ import rx.functions.Func2;
 import rx.schedulers.Schedulers;
 import timber.log.Timber;
 
-public class CustomDemoFragment
+public class CreateModeFragment
         extends BaseFragment {
 
     @InjectView(R.id.progress_operation_running)

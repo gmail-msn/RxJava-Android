@@ -19,9 +19,11 @@
     <string name="btn_demo_timing">Variations of timing/intervals/delays</string>
     <string name="btn_demo_exponential_backoff">Exponential backoff</string>
     <string name="btn_demo_rotation_persist">Rotation persist</string>
-    <string name="btn_demo_custom">Custom</string>
+    <string name="btn_demo_create_mode">Create Mode Observables</string>
     <string name="btn_transforming_observables">Transforming Observables</string>
     <string name="btn_filtering_observables">Filtering Observables</string>
+    <string name="btn_combining_observables">Combining Observables</string>
+    <string name="btn_error_handler_operators">Error Handler</string>
 
     <string name="msg_demo_concurrency_schedulers">This is a demo of how long running operations can be offloaded to a background thread. After the operation is done, we resume back on the main thread. All using RxJava! \n\n To really see this shine. Hit the button multiple times and see how the button click which is a ui operation is never blocked because the long operation only runs in the background</string>
     <string name="msg_demo_buffer">This is a demo of how events can be accumulated using the "buffer" operation. Tap the button below repetitively and you will notice in the logs that button taps are collected over a span of 2s and printed below.</string>
@@ -38,4 +40,6 @@
     <string name="msg_demo_rotation_persist">This is an example of starting an Observable and using the result across rotations. There are many ways to do this, we use a retained fragment in this example</string>
     <string name="msg_demo_custom">This is an example of Teddy making</string>
     <string name="msg_demo_transforming_observable">This is an example of Teddy making with transforming observables</string>
+    <string name="msg_demo_combining_observables">This is an example of Teddy making with combining observables</string>
+    <string name="msg_demo_error_handler_observables">This is an example of Teddy making with error handler observables</string>
 </resources>

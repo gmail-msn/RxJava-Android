@@ -38,9 +38,19 @@ public class MainFragment
     public void demoCustom() {
         getActivity().getSupportFragmentManager()
               .beginTransaction()
-              .addToBackStack(CustomDemoFragment.class.getName())
+              .addToBackStack(CreateModeFragment.class.getName())
               .replace(android.R.id.content,
-                    new CustomDemoFragment(), CustomDemoFragment.class.getName())
+                    new CreateModeFragment(), CreateModeFragment.class.getName())
+              .commit();
+    }
+
+    @OnClick(R.id.btn_error_handler)
+    public void errorHandler() {
+        getActivity().getSupportFragmentManager()
+              .beginTransaction()
+              .addToBackStack(ErrorHandlingOperatorsFragment.class.getName())
+              .replace(android.R.id.content,
+                    new ErrorHandlingOperatorsFragment(), ErrorHandlingOperatorsFragment.class.getName())
               .commit();
     }
 
@@ -85,6 +95,17 @@ public class MainFragment
               .replace(android.R.id.content,
                     new DebounceSearchEmitterFragment(),
                     DebounceSearchEmitterFragment.class.toString())
+              .commit();
+    }
+
+    @OnClick(R.id.btn_combining_observables)
+    public void combiningObservables() {
+        getActivity().getSupportFragmentManager()
+              .beginTransaction()
+              .addToBackStack(CombiningObservablesFragment.class.toString())
+              .replace(android.R.id.content,
+                    new CombiningObservablesFragment(),
+                      CombiningObservablesFragment.class.toString())
               .commit();
     }
 

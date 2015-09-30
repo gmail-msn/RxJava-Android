@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="@string/msg_demo_error_handler_observables"
+        />
+
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_on_error_return_operation"
+                style="@style/btn_request_style"
+                android:layout_marginLeft="20dp"
+                android:textSize="16sp"
+                android:text="Error Return"
+                />
+
+            <Button
+                android:id="@+id/btn_on_error_resume_next_operation"
+                style="@style/btn_request_style"
+                android:layout_marginLeft="20dp"
+                android:textSize="16sp"
+                android:text="Error Resume"
+                />
+
+            <Button
+                android:id="@+id/btn_exception_resume_operation"
+                style="@style/btn_request_style"
+                android:layout_marginLeft="20dp"
+                android:textSize="16sp"
+                android:text="Exception Resume"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_retry_operation"
+                style="@style/btn_request_style"
+                android:layout_marginLeft="20dp"
+                android:textSize="16sp"
+                android:text="Retry"
+                />
+
+            <Button
+                android:id="@+id/btn_retry_when_operation"
+                style="@style/btn_request_style"
+                android:layout_marginLeft="20dp"
+                android:textSize="16sp"
+                android:text="Retry When"
+                />
+
+            <!--<Button
+                android:id="@+id/btn_exception_resume_operation"
+                style="@style/btn_request_style"
+                android:layout_marginLeft="20dp"
+                android:textSize="16sp"
+                android:text="Exception Resume"
+                />-->
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_operation_running"
+            android:visibility="invisible"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="20dp"
+            />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list_threading_log"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        />
+</LinearLayout>
