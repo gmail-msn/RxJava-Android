@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:padding="10dp"
         android:gravity="center"
-        android:text="@string/msg_demo_custom"
+        android:text="@string/msg_demo_blocking_observable_observables"
         />
 
 
@@ -20,73 +20,50 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btn_create_operation"
+                android:id="@+id/btn_for_each_operation"
                 style="@style/btn_request_style"
                 android:layout_marginLeft="20dp"
+                android:text="For Each"
                 android:textSize="16sp"
-                android:text="Create Operator"
                 />
 
             <Button
-                android:id="@+id/btn_from_operation"
+                android:id="@+id/btn_first_operation"
                 style="@style/btn_request_style"
                 android:layout_marginLeft="20dp"
+                android:text="First Operator"
                 android:textSize="16sp"
-                android:text="From Operator"
                 />
 
             <Button
-                android:id="@+id/btn_repeat_when_operation"
+                android:id="@+id/btn_last_operation"
                 style="@style/btn_request_style"
                 android:layout_marginLeft="20dp"
+                android:text="Last"
                 android:textSize="16sp"
-                android:text="Repeat When"
                 />
         </LinearLayout>
+
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <Button
-                android:id="@+id/btn_just_operation"
-                style="@style/btn_request_style"
-                android:layout_marginLeft="20dp"
-                android:textSize="16sp"
-                android:text="Just Operator"
-                />
-            <Button
-                android:id="@+id/btn_timer_operation"
-                style="@style/btn_request_style"
-                android:layout_marginLeft="20dp"
-                android:textSize="16sp"
-                android:text="Timer Operator"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <Button
-                android:id="@+id/btn_range_operation"
-                style="@style/btn_request_style"
-                android:layout_marginLeft="20dp"
-                android:textSize="16sp"
-                android:text="Range Operator"
-                />
 
             <Button
-                android:id="@+id/btn_repeat_operation"
+                android:id="@+id/btn_blocking_single_operation"
                 style="@style/btn_request_style"
                 android:layout_marginLeft="20dp"
+                android:text="Single"
                 android:textSize="16sp"
-                android:text="Repeat Operator"
                 />
+
         </LinearLayout>
 
         <ProgressBar

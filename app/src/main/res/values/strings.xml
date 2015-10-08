@@ -24,6 +24,9 @@
     <string name="btn_filtering_observables">Filtering Observables</string>
     <string name="btn_combining_observables">Combining Observables</string>
     <string name="btn_error_handler_operators">Error Handler</string>
+    <string name="btn_conditional_boolean_operators">Conditional Boolean</string>
+    <string name="btn_blocking_observable_operators">Blocking Observable</string>
+    <string name="btn_mathematical_aggregate_operators">Mathematical and Aggregate</string>
 
     <string name="msg_demo_concurrency_schedulers">This is a demo of how long running operations can be offloaded to a background thread. After the operation is done, we resume back on the main thread. All using RxJava! \n\n To really see this shine. Hit the button multiple times and see how the button click which is a ui operation is never blocked because the long operation only runs in the background</string>
     <string name="msg_demo_buffer">This is a demo of how events can be accumulated using the "buffer" operation. Tap the button below repetitively and you will notice in the logs that button taps are collected over a span of 2s and printed below.</string>
@@ -42,4 +45,7 @@
     <string name="msg_demo_transforming_observable">This is an example of Teddy making with transforming observables</string>
     <string name="msg_demo_combining_observables">This is an example of Teddy making with combining observables</string>
     <string name="msg_demo_error_handler_observables">This is an example of Teddy making with error handler observables</string>
+    <string name="msg_demo_conditional_boolean_observables">This is an example of Teddy making with conditional boolean observables</string>
+    <string name="msg_demo_blocking_observable_observables">This is an example of Teddy making with Blocking observables</string>
+    <string name="msg_demo_mathematical_aggregate_observables">This is an example of Teddy making with Mathematical observables</string>
 </resources>

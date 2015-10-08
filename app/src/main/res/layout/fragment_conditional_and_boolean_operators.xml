@@ -1,106 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout
-    android:orientation="vertical"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
     >
 
     <TextView
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:padding="10dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/msg_demo_custom"
+        android:padding="10dp"
+        android:text="@string/msg_demo_conditional_boolean_observables"
         />
 
 
     <LinearLayout
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btn_create_operation"
+                android:id="@+id/btn_amb_operation"
                 style="@style/btn_request_style"
                 android:layout_marginLeft="20dp"
+                android:text="AMB Operator"
                 android:textSize="16sp"
-                android:text="Create Operator"
                 />
 
             <Button
-                android:id="@+id/btn_from_operation"
+                android:id="@+id/btn_contains_operation"
                 style="@style/btn_request_style"
                 android:layout_marginLeft="20dp"
+                android:text="Contains Operator"
                 android:textSize="16sp"
-                android:text="From Operator"
                 />
 
             <Button
-                android:id="@+id/btn_repeat_when_operation"
+                android:id="@+id/btn_skip_until_operation"
                 style="@style/btn_request_style"
                 android:layout_marginLeft="20dp"
+                android:text="Skip Until"
                 android:textSize="16sp"
-                android:text="Repeat When"
                 />
         </LinearLayout>
+
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <Button
-                android:id="@+id/btn_just_operation"
+                android:id="@+id/btn_take_util_operation"
                 style="@style/btn_request_style"
                 android:layout_marginLeft="20dp"
+                android:text="Take Util"
                 android:textSize="16sp"
-                android:text="Just Operator"
                 />
-            <Button
-                android:id="@+id/btn_timer_operation"
+
+            <!--<Button
+                android:id="@+id/btn_contains_operation"
                 style="@style/btn_request_style"
                 android:layout_marginLeft="20dp"
                 android:textSize="16sp"
-                android:text="Timer Operator"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <Button
-                android:id="@+id/btn_range_operation"
-                style="@style/btn_request_style"
-                android:layout_marginLeft="20dp"
-                android:textSize="16sp"
-                android:text="Range Operator"
+                android:text="Contains Operator"
                 />
 
             <Button
-                android:id="@+id/btn_repeat_operation"
+                android:id="@+id/btn_skip_until_operation"
                 style="@style/btn_request_style"
                 android:layout_marginLeft="20dp"
                 android:textSize="16sp"
-                android:text="Repeat Operator"
-                />
+                android:text="Skip Until"
+                />-->
         </LinearLayout>
+
 
         <ProgressBar
             android:id="@+id/progress_operation_running"
-            android:visibility="invisible"
-            android:layout_height="wrap_content"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
+            android:visibility="invisible"
             />
     </LinearLayout>
 
     <ListView
         android:id="@+id/list_threading_log"
-        android:layout_height="match_parent"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
         />
 </LinearLayout>

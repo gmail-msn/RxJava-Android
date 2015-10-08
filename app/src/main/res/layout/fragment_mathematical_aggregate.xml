@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="@string/msg_demo_mathematical_aggregate_observables"
+        />
+
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_average_integer_operation"
+                style="@style/btn_request_style"
+                android:layout_marginLeft="20dp"
+                android:text="Average Integer"
+                android:textSize="16sp"
+                />
+
+            <Button
+                android:id="@+id/btn_concat_operation"
+                style="@style/btn_request_style"
+                android:layout_marginLeft="20dp"
+                android:text="Concat"
+                android:textSize="16sp"
+                />
+
+            <Button
+                android:id="@+id/btn_sorted_list_operation"
+                style="@style/btn_request_style"
+                android:layout_marginLeft="20dp"
+                android:text="Sorted List"
+                android:textSize="16sp"
+                />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_operation_running"
+            android:visibility="invisible"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="20dp"
+            />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list_threading_log"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        />
+</LinearLayout>

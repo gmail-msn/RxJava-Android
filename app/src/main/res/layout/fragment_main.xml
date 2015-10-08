@@ -134,5 +134,25 @@
             android:layout_width="match_parent"
             android:text="@string/btn_error_handler_operators"
             />
+        <Button
+            android:id="@+id/btn_demo_conditional_boolean_operators"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/btn_conditional_boolean_operators"
+            />
+
+        <Button
+            android:id="@+id/btn_demo_blocking_observable_operators"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/btn_blocking_observable_operators"
+            />
+
+        <Button
+            android:id="@+id/btn_demo_mathematical_aggregate_operators"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/btn_mathematical_aggregate_operators"
+            />
     </LinearLayout>
 </ScrollView>
