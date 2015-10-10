@@ -248,4 +248,15 @@ public class MainFragment
                         MathematicalAggregateFragment.class.toString())
                 .commit();
     }
+
+    @OnClick(R.id.btn_demo_string_observable_operators)
+    public void stringObservableOperators() {
+        getActivity().getSupportFragmentManager()
+                .beginTransaction()
+                .addToBackStack(StringObservablesFragment.class.toString())
+                .replace(android.R.id.content,
+                        new StringObservablesFragment(),
+                        StringObservablesFragment.class.toString())
+                .commit();
+    }
 }

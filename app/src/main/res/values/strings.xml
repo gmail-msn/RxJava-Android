@@ -27,6 +27,7 @@
     <string name="btn_conditional_boolean_operators">Conditional Boolean</string>
     <string name="btn_blocking_observable_operators">Blocking Observable</string>
     <string name="btn_mathematical_aggregate_operators">Mathematical and Aggregate</string>
+    <string name="btn_string_observables_operators">String Observables</string>
 
     <string name="msg_demo_concurrency_schedulers">This is a demo of how long running operations can be offloaded to a background thread. After the operation is done, we resume back on the main thread. All using RxJava! \n\n To really see this shine. Hit the button multiple times and see how the button click which is a ui operation is never blocked because the long operation only runs in the background</string>
     <string name="msg_demo_buffer">This is a demo of how events can be accumulated using the "buffer" operation. Tap the button below repetitively and you will notice in the logs that button taps are collected over a span of 2s and printed below.</string>

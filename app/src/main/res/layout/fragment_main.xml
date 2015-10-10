@@ -154,5 +154,12 @@
             android:layout_width="match_parent"
             android:text="@string/btn_mathematical_aggregate_operators"
             />
+
+        <Button
+            android:id="@+id/btn_demo_string_observable_operators"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/btn_string_observables_operators"
+            />
     </LinearLayout>
 </ScrollView>
