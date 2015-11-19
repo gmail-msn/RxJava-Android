@@ -259,4 +259,15 @@ public class MainFragment
                         StringObservablesFragment.class.toString())
                 .commit();
     }
+
+    @OnClick(R.id.btn_demo_side_effect_observable)
+    public void sideEffectMethods() {
+        getActivity().getSupportFragmentManager()
+                .beginTransaction()
+                .addToBackStack(SideEffectFragment.class.toString())
+                .replace(android.R.id.content,
+                        new SideEffectFragment(),
+                        SideEffectFragment.class.toString())
+                .commit();
+    }
 }

@@ -161,5 +161,12 @@
             android:layout_width="match_parent"
             android:text="@string/btn_string_observables_operators"
             />
+
+        <Button
+            android:id="@+id/btn_demo_side_effect_observable"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/btn_side_effect_observables"
+            />
     </LinearLayout>
 </ScrollView>
