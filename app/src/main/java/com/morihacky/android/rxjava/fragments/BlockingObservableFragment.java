@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
+import com.fernandocejas.frodo.annotation.RxLogObservable;
 import com.morihacky.android.rxjava.R;
 
 import java.util.ArrayList;
@@ -135,6 +136,7 @@ public class BlockingObservableFragment
         observable1.singleOrDefault(_getIntegerObserver());
     }
 
+    @RxLogObservable
     private Observable<Integer> _getIntegerObservable() {
         return Observable.just(1, 2, 3, 4).map(new Func1<Integer, Integer>() {
             @Override

@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
+import com.fernandocejas.frodo.annotation.RxLogObservable;
 import com.morihacky.android.rxjava.R;
 
 import java.util.ArrayList;
@@ -85,7 +86,7 @@ public class SideEffectFragment
 
         _progress.setVisibility(View.VISIBLE);
         _log("Do On Complete Clicked");
-        Observable.from(Arrays.asList(new Integer[]{2, 3, 5, 7, 11})).doOnNext(new Action1<Integer>() {
+        Observable.from(Arrays.asList(new Integer[]{2, 3, 4, 5, 7, 8, 11})).doOnNext(new Action1<Integer>() {
             @Override
             public void call(Integer integer) {
                 _log("items:" + integer);
@@ -93,7 +94,7 @@ public class SideEffectFragment
         }).filter(new Func1<Integer, Boolean>() {
             @Override
             public Boolean call(Integer integer) {
-                return (integer % 2 != 0);
+                return (integer % 2 == 0);
             }
         }).doOnNext(new Action1<Integer>() {
             @Override
@@ -105,21 +106,22 @@ public class SideEffectFragment
             public void call(Integer integer) {
                 _log("count items:" + integer);
             }
-        }).map(new Func1<Integer, Object>() {
+        }).map(new Func1<Integer, String>() {
 
             @Override
-            public Object call(Integer integer) {
+            public String call(Integer integer) {
                 return String.format("Contains %d elements", integer);
             }
         }).doOnCompleted(new Action0() {
             @Override
             public void call() {
+                _progress.setVisibility(View.INVISIBLE);
                 _log("do on complete");
             }
-        }).subscribe(new Action1<Object>() {
+        }).subscribe(new Action1<String>() {
             @Override
-            public void call(Object o) {
-                _log("last:" + String.valueOf(o));
+            public void call(String str) {
+                _log("last:" + str);
             }
         });
     }

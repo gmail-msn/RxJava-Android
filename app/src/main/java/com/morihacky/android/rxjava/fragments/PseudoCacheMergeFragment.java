@@ -12,6 +12,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
 
+import com.fernandocejas.frodo.annotation.RxLogObservable;
 import com.morihacky.android.rxjava.R;
 import com.morihacky.android.rxjava.retrofit.Contributor;
 import com.morihacky.android.rxjava.retrofit.GithubApi;
@@ -110,6 +111,7 @@ public class PseudoCacheMergeFragment
         return list;
     }
 
+    @RxLogObservable
     private Observable<Pair<Contributor, Long>> _getCachedData() {
 
         List<Pair<Contributor, Long>> list = new ArrayList<>();
@@ -128,6 +130,7 @@ public class PseudoCacheMergeFragment
         return Observable.from(list);
     }
 
+    @RxLogObservable
     private Observable<Pair<Contributor, Long>> _getFreshData() {
         return _createGithubApi().contributors("square", "retrofit")
               .flatMap(new Func1<List<Contributor>, Observable<Contributor>>() {

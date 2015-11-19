@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
+import com.fernandocejas.frodo.annotation.RxLogObservable;
 import com.morihacky.android.rxjava.R;
 
 import butterknife.ButterKnife;
@@ -73,6 +74,7 @@ public class ConcurrencyWithSchedulersDemoFragment
               .subscribe(_getObserver());                             // Observer
     }
 
+    @RxLogObservable
     private Observable<Boolean> _getObservable() {
         return Observable.just(true).map(new Func1<Boolean, Boolean>() {
             @Override

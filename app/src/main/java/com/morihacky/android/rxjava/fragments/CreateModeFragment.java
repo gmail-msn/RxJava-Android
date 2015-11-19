@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
+import com.fernandocejas.frodo.annotation.RxLogObservable;
 import com.morihacky.android.rxjava.R;
 
 import java.util.ArrayList;
@@ -170,6 +171,7 @@ public class CreateModeFragment
                 .subscribe(_getObserver());                             // Observer
     }
 
+    @RxLogObservable
     private Observable<Integer> _getObservable() {
         return Observable.create(new Observable.OnSubscribe<Integer>() {
             @Override
@@ -188,6 +190,7 @@ public class CreateModeFragment
         });
     }
 
+    @RxLogObservable
     private Observable<Integer> _getJustObservable() {
         return Observable.just(1, 2, 3);
     }

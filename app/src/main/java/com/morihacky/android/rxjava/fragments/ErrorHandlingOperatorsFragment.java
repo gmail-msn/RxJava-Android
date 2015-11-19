@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
+import com.fernandocejas.frodo.annotation.RxLogObservable;
 import com.morihacky.android.rxjava.R;
 
 import java.util.ArrayList;
@@ -156,6 +157,7 @@ public class ErrorHandlingOperatorsFragment
         }).observeOn(AndroidSchedulers.mainThread()).subscribeOn(Schedulers.io()).subscribe(_getIntegerSubscriber());
     }
 
+    @RxLogObservable
     private Observable.OnSubscribe<Integer> _getIntegerObservable() {
         return new Observable.OnSubscribe<Integer>() {
             @Override

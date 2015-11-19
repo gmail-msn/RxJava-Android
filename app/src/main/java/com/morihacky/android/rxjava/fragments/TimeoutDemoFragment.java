@@ -12,6 +12,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
 
+import com.fernandocejas.frodo.annotation.RxLogObservable;
 import com.morihacky.android.rxjava.R;
 import com.morihacky.android.rxjava.wiring.LogAdapter;
 import java.util.ArrayList;
@@ -77,7 +78,7 @@ public class TimeoutDemoFragment
 
     // -----------------------------------------------------------------------------------
     // Main Rx entities
-
+    @RxLogObservable
     private Observable<String> _getObservableFor5sTask() {
         return Observable.create(new Observable.OnSubscribe<String>() {
 
@@ -95,6 +96,7 @@ public class TimeoutDemoFragment
         });
     }
 
+    @RxLogObservable
     private Observable<String> _getObservableTask_2sToComplete() {
         return Observable.create(new Observable.OnSubscribe<String>() {
 
@@ -112,6 +114,7 @@ public class TimeoutDemoFragment
         }).subscribeOn(Schedulers.computation()).timeout(3, TimeUnit.SECONDS);
     }
 
+    @RxLogObservable
     private Observable<? extends String> _getTimeoutObservable() {
         return Observable.create(new Observable.OnSubscribe<String>() {
 

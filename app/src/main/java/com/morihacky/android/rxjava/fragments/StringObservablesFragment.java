@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
+import com.fernandocejas.frodo.annotation.RxLogObservable;
 import com.morihacky.android.rxjava.R;
 
 import java.util.ArrayList;
@@ -81,6 +82,7 @@ public class StringObservablesFragment
         StringObservable.split(Observable.just("abc-def-efg"), "-").subscribe(_getStringObserver());
     }
 
+    @RxLogObservable
     private Observable<Boolean> _getObservable() {
         return Observable.just(true).map(new Func1<Boolean, Boolean>() {
             @Override

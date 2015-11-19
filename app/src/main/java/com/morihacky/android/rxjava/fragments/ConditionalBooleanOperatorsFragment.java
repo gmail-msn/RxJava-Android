@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
+import com.fernandocejas.frodo.annotation.RxLogObservable;
 import com.morihacky.android.rxjava.R;
 
 import java.util.ArrayList;
@@ -110,6 +111,7 @@ public class ConditionalBooleanOperatorsFragment
         observable2.takeUntil(observable1).subscribe(_getIntegerObserver());
     }
 
+    @RxLogObservable
     private Observable<Boolean> _getObservable() {
         return Observable.just(true).map(new Func1<Boolean, Boolean>() {
             @Override

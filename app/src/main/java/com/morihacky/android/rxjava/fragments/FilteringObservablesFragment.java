@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
+import com.fernandocejas.frodo.annotation.RxLogObservable;
 import com.morihacky.android.rxjava.R;
 
 import java.util.ArrayList;
@@ -215,6 +216,7 @@ public class FilteringObservablesFragment
         Observable.just(1, 2, 3, 4, 5, 6, 7).takeLast(2).subscribe(_getObserver());
     }
 
+    @RxLogObservable
     private Observable<Boolean> _getObservable() {
         return Observable.just(true).map(new Func1<Boolean, Boolean>() {
             @Override

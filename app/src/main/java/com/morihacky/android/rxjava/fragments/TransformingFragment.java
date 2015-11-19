@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
+import com.fernandocejas.frodo.annotation.RxLogObservable;
 import com.morihacky.android.rxjava.R;
 
 import java.io.File;
@@ -300,6 +301,7 @@ public class TransformingFragment
         });
     }
 
+    @RxLogObservable
     private Observable<String> _getObservable() {
         //定义邮件内容
         final String[] mails = new String[]{"Here is an email!", "Another email!", "Yet another email!"};
@@ -353,6 +355,7 @@ public class TransformingFragment
         };
     }
 
+    @RxLogObservable
     private Observable<File> listFiles(final File f) {
         if (null != f && f.isDirectory()) {
             return Observable.from(f.listFiles()).flatMap(new Func1<File, Observable<File>>() {
